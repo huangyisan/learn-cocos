@@ -58,6 +58,7 @@ export default class PlayControl extends cc.Component {
     }
 
     die() {
+        // 停止子弹生成发射
         this.stopSchedule();
         cc.loader.loadRes("hero1_die", cc.SpriteFrame, (err, spriteFrame) => {
             this.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
