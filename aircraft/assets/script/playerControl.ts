@@ -62,11 +62,11 @@ export default class PlayControl extends cc.Component {
         this.stopSchedule();
         cc.loader.loadRes("hero1_die", cc.SpriteFrame, (err, spriteFrame) => {
             this.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
-            
+            setTimeout(() => {
+                cc.log("this node in setTimeout: ", this.node);
+                this.node.destroy();
+            }, 1000);
         });
-        setTimeout(() => {
-            cc.log("this node in setTimeout: ", this.node);
-            this.node.destroy();
-        }, 1000);
+        
     }
 }

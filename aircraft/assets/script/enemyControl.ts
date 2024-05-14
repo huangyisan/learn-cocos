@@ -36,11 +36,12 @@ export default class EnemyControl extends cc.Component {
         // 替换图片, 替换成目录下resources/enemy_die.png
         this.isDie = true;
         cc.loader.loadRes("enemy0_die", cc.SpriteFrame, (err, spriteFrame) => {
-           this.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
-        });
-        // 等待一秒钟
-        setTimeout(() => {
+            this.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+            // 等待一秒钟
+            setTimeout(() => {
             this.node.destroy();
-        }, 300);
+            }, 300);
+        });
+       
     }
 }
