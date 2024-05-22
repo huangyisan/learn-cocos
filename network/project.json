@@ -1,0 +1,8 @@
+{
+  "engine": "cocos-creator-js",
+  "packages": "packages",
+  "name": "network",
+  "id": "2d014c70-7b59-42cf-8fcf-c690dc397c08",
+  "version": "2.4.9",
+  "isNew": false
+}
